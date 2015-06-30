@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>Cover Fox</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid" style="background-color: #e97770;">
+            <div class="navbar-header"></div>
+            <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-6">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><img alt="Brand" src="img/facebook.png"></a></li>
+                    <li><a href="#"><img alt="Brand" src="img/twitter.png"></a></li>
+                    <li><a href="#"><img alt="Brand" src="img/android.png"></a></li>
+                    <li><a href="#"><img alt="Brand" src="img/apple.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="main-container"></div>
+
+    <script id="page1Template" type="text/template">
+        <div class="row">
+            <select id = "state-container" class="center-block">
+                <option value="">Select an option</option>
+            </select>
+        </div>
+        <hr>
+        <div class="row">
+            <select id = "city-container" class="center-block">
+                <option value="">Select an option</option>
+            </select>
+        </div>
+        <hr>
+        <div class="row">
+            <select id = "pincode-container" class="center-block">
+                <option value="">Select an option</option>
+            </select>
+        </div>
+        <hr>
+        <button type="button" id="next-1" class="btn btn-primary center-block">Next</button>
+    </script>
+	<script id="reUsableTemplate" type="text/template">
+        <option value="<%=key %>"><%=key %></option>
+    </script>
+
+    <script id="page2Template" type="text/template">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-10">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Selected Data</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">State</th>
+                                    <td><%=state %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">City</th>
+                                    <td><%=city %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Pincode</th>
+                                    <td><%=pinCode %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sum</th>
+                                    <td><%=sum %></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <button type="button" id="next-2" class="btn btn-primary center-block">Next</button>
+    </script>
+
+    <script id="page3Template" type="text/template">
+        <div class="alert alert-success">
+            <h1 class="text-center">Thank You!</h1>
+
+        </div>
+    </script>
+
+</body>
+
+
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/underscore.min.js"></script>
+	<script type="text/javascript" src="js/backbone.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</html>
